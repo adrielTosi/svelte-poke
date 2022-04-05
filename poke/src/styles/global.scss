@@ -1,0 +1,31 @@
+@import './reset.scss';
+@import './typography.scss';
+
+:root {
+  --color-cream: #e2dcc3;
+  --color-orange: rgb(197, 79, 0);
+  --color-black: rgb(51, 49, 47);
+
+  --animation-duration: 0.33s;
+
+  --font-stack: 'Rubik', sans-serif;
+}
+
+body {
+  background-color: var(--color-cream);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-orange);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
