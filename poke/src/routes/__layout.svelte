@@ -1,3 +1,15 @@
+<script context="module">
+	import { getPokemons } from '../services/api';
+	import { pokemonStore } from '../store/store';
+
+	export const load = async ({ fetch }) => {
+		const tmpPokemonsStore = await getPokemons(fetch, 0, 15);
+		pokemonStore.update(() => tmpPokemonsStore);
+
+		return tmpPokemonsStore;
+	};
+</script>
+
 <script lang="ts">
 	import Nav from '../components/Nav/Nav.svelte';
 </script>
